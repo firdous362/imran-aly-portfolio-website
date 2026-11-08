@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imran Aly — Full-stack Developer | SaaS, Apps &amp; Automation</title>
+  <meta name="description" content="Imran Aly builds web and app products, multi-tenant SaaS, and AI-powered Instagram and WhatsApp automations with n8n, Make, and Zapier." />
+  <meta name="theme-color" content="#090c0c" />
+  <meta property="og:title" content="Imran Aly — Full-stack Developer | SaaS, Apps &amp; Automation" />
+  <meta property="og:description" content="Web and app development, SaaS products, and AI automation for Instagram, WhatsApp, and business workflows." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23090c0c'/%3E%3Ctext x='32' y='46' font-size='38' font-weight='800' text-anchor='middle' fill='%23c4ff55' font-family='Arial'%3EI%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <a href="#top" class="logo">imran<span>.dev</span></a>
+    <nav>
+      <a href="#work" data-link="work">Work</a>
+      <a href="#experience" data-link="experience">Experience</a>
+      <a href="#stack" data-link="stack">Stack</a>
+      <a href="#about" data-link="about">About</a>
+      <a href="#contact" class="nav-cta">Hire me</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow js-hero">IMRAN ALY <span>·</span> FULL-STACK ENGINEER</p>
+        <p class="pill js-hero"><i></i>Web · Apps · AI automation</p>
+        <h1 class="js-hero">I build web &amp; app products and <span>automate the busywork.</span></h1>
+        <p class="hero-sub js-hero">From polished websites and full-stack apps to AI-powered workflows, I connect the product to the tools people use every day—Instagram, WhatsApp, CRMs, and more.</p>
+        <div class="hero-actions js-hero">
+          <a href="#work" class="btn btn-primary">See my work</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+        <div class="hero-stats js-hero" aria-label="Quick stats about Imran's work">
+          <div class="stat-card">
+            <strong>2.5+</strong>
+            <span>Years building products</span>
+          </div>
+          <div class="stat-card">
+            <strong>8+</strong>
+            <span>Products &amp; workflows</span>
+          </div>
+          <div class="stat-card">
+            <strong>24/7</strong>
+            <span>Automation-first thinking</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Animated automation workflow -->
+      <div class="flow js-hero" id="flow" aria-label="Animated automation workflow. Drag the nodes to rearrange them.">
+        <svg aria-hidden="true"></svg>
+
+        <div class="node" data-id="webhook" data-kind="trigger">
+          <i class="n-dot"></i><b class="n-title">Instagram lead</b><span class="n-meta">DM / form trigger</span>
+        </div>
+        <div class="node" data-id="tenant" data-kind="core">
+          <i class="n-dot"></i><b class="n-title">AI qualifies lead</b><span class="n-meta">intent + details</span>
+        </div>
+        <div class="node" data-id="domain" data-kind="action">
+          <i class="n-dot"></i><b class="n-title">Update CRM</b><span class="n-meta">lead + conversation</span>
+        </div>
+        <div class="node" data-id="scorer" data-kind="ai">
+          <i class="n-dot"></i><b class="n-title">WhatsApp reply</b><span class="n-meta">personalized response</span>
+        </div>
+        <div class="node" data-id="whatsapp" data-kind="action">
+          <i class="n-dot"></i><b class="n-title">Follow-up flow</b><span class="n-meta">n8n · Make · Zapier</span>
+        </div>
+
+        <p class="flow-hint" id="flowHint">Drag the nodes around</p>
+      </div>
+    </section>
+
+    <!-- TOOL MARQUEE -->
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Web development</span><span>App development</span><span>Next.js</span><span>React</span><span>NestJS</span><span>PostgreSQL</span><span>WhatsApp flows</span><span>Instagram automation</span><span>n8n</span><span>Make</span><span>Zapier</span><span>AI workflows</span>
+        <span>Web development</span><span>App development</span><span>Next.js</span><span>React</span><span>NestJS</span><span>PostgreSQL</span><span>WhatsApp flows</span><span>Instagram automation</span><span>n8n</span><span>Make</span><span>Zapier</span><span>AI workflows</span>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" aria-labelledby="servicesTitle">
+      <div class="services-head">
+        <div>
+          <p class="eyebrow">WHAT I CAN BUILD WITH YOU</p>
+          <h2 id="servicesTitle">From first screen<br />to <span>follow-up.</span></h2>
+        </div>
+        <p>One partner for your product, your app, and the workflows that keep your business moving.</p>
+      </div>
+      <div class="services-grid">
+        <a class="service-card" href="#work">
+          <div class="service-card-top"><span class="service-index">01 / DIGITAL PRODUCTS</span><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="13" rx="2" /><path d="M8 21h8M12 17v4M7 8h10M7 12h6" /></svg></span></div>
+          <h3>Websites &amp; SaaS</h3>
+          <p>Fast, responsive websites, e-commerce, and multi-tenant platforms built around real user needs.</p>
+          <span class="service-link">Explore selected work <span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="service-card" href="#stack">
+          <div class="service-card-top"><span class="service-index">02 / WEB + APP</span><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="6" y="2.5" width="12" height="19" rx="2.5" /><path d="M10 5h4M11 18.5h2" /><path d="m3 8-2 2 2 2m18-4 2 2-2 2" /></svg></span></div>
+          <h3>Apps &amp; backends</h3>
+          <p>Useful app experiences backed by APIs, authentication, databases, and scalable product logic.</p>
+          <span class="service-link">See the toolkit <span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="service-card service-card-featured" href="#automation">
+          <div class="service-card-top"><span class="service-index">03 / AUTOMATION</span><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 5h4v4H5zM15 15h4v4h-4z" /><path d="M9 7h3a3 3 0 0 1 3 3v5M12 10l3 3 3-3" /><path d="M5 15h4v4H5z" /></svg></span></div>
+          <h3>AI &amp; automations</h3>
+          <p>Connect Instagram leads, AI steps, your CRM, and WhatsApp follow-ups into one smooth flow.</p>
+          <span class="service-link">Explore automation <span aria-hidden="true">↗</span></span>
+        </a>
+      </div>
+      <div class="service-tools" aria-label="Automation platforms and integrations">
+        <span>WORKS WITH</span><b>n8n</b><i></i><b>Make</b><i></i><b>Zapier</b><i></i><b>Instagram</b><i></i><b>WhatsApp</b><i></i><b>Webhooks</b>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="section" id="work">
+      <div class="section-head">
+        <h2>Selected work</h2>
+        <p>Product builds and real-world automation flows, made to solve practical problems.</p>
+      </div>
+
+      <div class="project-filters" role="group" aria-label="Filter projects">
+        <button class="filter-button active" type="button" data-filter="all" aria-controls="projects" aria-pressed="true">All <span>9</span></button>
+        <button class="filter-button" type="button" data-filter="products" aria-controls="projects" aria-pressed="false">Web &amp; SaaS <span>8</span></button>
+        <button class="filter-button" type="button" data-filter="automation" aria-controls="projects" aria-pressed="false">Automation <span>2</span></button>
+      </div>
+
+      <div class="projects" id="projects">
+
+        <article class="project" data-category="products">
+          <button class="project-head" aria-expanded="false">
+            <span class="p-name">Zioza HRM</span>
+            <span class="p-summary">Multi-tenant HR platform where each IT/ITES company gets a workspace and domain.</span>
+            <span class="p-type">Multi-tenant · IT &amp; ITES</span>
+            <span class="p-plus" aria-hidden="true"></span>
+          </button>
+          <div class="project-body">
+            <div class="project-inner">
+              <div>
+                <p>A multi-tenant HR platform for IT and ITES companies. Each organization gets its own workspace and domain automatically.</p>
+                <ul class="feat">
+                  <li>Tenant isolation with automatic domain creation</li>
+                  <li>Employees, attendance, leaves and payroll flows</li>
+                  <li>Role-based access for admins, managers and staff</li>
+                  <li>Announcements, calendar and dashboards</li>
+                </ul>
+                <div class="chips"><span>Next.js</span><span>NestJS</span><span>PostgreSQL</span><span>RBAC</span></div>
+                <div class="project-links"><a href="https://hrm.zioza.com" target="_blank" rel="noopener noreferrer">Visit Zioza HRM <span aria-hidden="true">↗</span></a></div>
+              </div>
+              <div class="mock" aria-hidden="true">
+                <div class="mock-row"><i class="mock-dot"></i><code>hrm.zioza.com</code><span class="mock-badge">HRM</span></div>
+                <div class="mock-row"><i class="mock-dot"></i><code>Workspace for every company</code><span class="mock-badge">Tenant</span></div>
+                <div class="mock-row"><i class="mock-dot"></i><code>Roles, teams &amp; people ops</code><span class="mock-badge">RBAC</span></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="products automation">
+          <button class="project-head" aria-expanded="false">
+            <span class="p-name">Social Media Marketing SaaS</span>
+            <span class="p-summary">Instagram leads, WhatsApp conversations and campaign tools in one place.</span>
+            <span class="p-type">Instagram · WhatsApp</span>
+            <span class="p-plus" aria-hidden="true"></span>
+          </button>
+          <div class="project-body">
+            <div class="project-inner">
+              <div>
+                <p>A marketing platform for businesses to run campaigns and conversations across Instagram and WhatsApp from one dashboard.</p>
+                <ul class="feat">
+                  <li>Capture Instagram leads and organize audiences, segments and tags</li>
+                  <li>Connect WhatsApp conversations, quick replies and follow-up messages</li>
+                  <li>Manage campaigns and customer conversations from one dashboard</li>
+                  <li>Automate lead handoff and follow-ups with webhooks</li>
+                </ul>
+                <div class="chips"><span>NestJS</span><span>Prisma</span><span>Messaging APIs</span><span>Automation</span></div>
+              </div>
+              <div class="mock" aria-hidden="true">
+                <div class="bubble in">New lead from Instagram</div>
+                <div class="bubble out">Auto-reply sent on WhatsApp</div>
+                <div class="bubble in">Follow-up scheduled</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="products">
+          <button class="project-head" aria-expanded="false">
+            <span class="p-name">WorkOnTap</span>
+            <span class="p-summary">Home-services marketplace for cleaning, moving and handyman bookings.</span>
+            <span class="p-type">Web · Mobile app</span>
+            <span class="p-plus" aria-hidden="true"></span>
+          </button>
+          <div class="project-body">
+            <div class="project-inner">
+              <div>
+                <p>A home-services marketplace built for customers to discover and book cleaning, moving and handyman services on the web and Android app, available on Google Play.</p>
+                <ul class="feat">
+                  <li>End-to-end web and app product development</li>
+                  <li>Service discovery and customer booking journeys</li>
+                  <li>Marketplace experience for local home services</li>
+                </ul>
+                <div class="chips"><span>Web development</span><span>Android app</span><span>Marketplace</span></div>
+                <div class="project-links"><a href="https://workontap.com" target="_blank" rel="noopener noreferrer">Visit WorkOnTap <span aria-hidden="true">↗</span></a></div>
+              </div>
+              <div class="mock product-preview" aria-hidden="true">
+                <span class="preview-kicker">HOME SERVICES, ON DEMAND</span>
+                <strong>Find help for<br />the things that matter.</strong>
+                <div class="preview-services"><span>Cleaning</span><span>Moving</span><span>Handyman</span></div>
+                <span class="preview-action">Explore services <b>↗</b></span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="products">
+          <button class="project-head" aria-expanded="false">
+            <span class="p-name">Gold Shopper</span>
+            <span class="p-summary">Cloud ERP for jewellers, from billing and inventory to GST and gold rates.</span>
+            <span class="p-type">Jewellery · Cloud ERP</span>
+            <span class="p-plus" aria-hidden="true"></span>
+          </button>
+          <div class="project-body">
+            <div class="project-inner">
+              <div>
+                <p>A cloud ERP designed for jewellery businesses to manage daily sales and operations from one place.</p>
+                <ul class="feat">
+                  <li>Billing and inventory management</li>
+                  <li>GST workflows for jewellery operations</li>
+                  <li>Gold-rate tracking in the business workflow</li>
+                </ul>
+                <div class="chips"><span>Cloud ERP</span><span>Billing</span><span>Inventory</span><span>GST</span></div>
+                <div class="project-links"><a href="https://goldshopper.in" target="_blank" rel="noopener noreferrer">Visit Gold Shopper <span aria-hidden="true">↗</span></a></div>
+              </div>
+              <div class="mock erp-preview" aria-hidden="true">
+                <span class="preview-kicker">TODAY AT A GLANCE</span>
+                <div class="erp-stat"><span>Billing</span><b>Sales &amp; invoices</b><i>01</i></div>
+                <div class="erp-stat"><span>Inventory</span><b>Stock overview</b><i>02</i></div>
+                <div class="erp-stat"><span>Gold rates</span><b>Business-ready</b><i>03</i></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="products">
+          <button class="project-head" aria-expanded="false">
+            <span class="p-name">Brillic</span>
+            <span class="p-summary">A Figma-led study abroad and immigration website, brought to life on the web.</span>
+            <span class="p-type">Education · Immigration</span>
+            <span class="p-plus" aria-hidden="true"></span>
+          </button>
+          <div class="project-body">
+            <div class="project-inner">
+              <div>
+                <p>A study abroad and immigration website developed from a Figma design, turning the supplied visual direction into a responsive web experience.</p>
+                <ul class="feat">
+                  <li>Faithful implementation of the provided Figma design</li>
+                  <li>Responsive pages for study and immigration services</li>
+                  <li>Clear pathways for prospective students</li>
+                </ul>
+                <div class="chips"><span>Web development</span><span>Responsive UI</span><span>Figma to web</span></div>
+                <div class="project-links"><a href="https://brillic.com" target="_blank" rel="noopener noreferrer">Visit Brillic <span aria-hidden="true">↗</span></a></div>
+              </div>
+              <div class="mock brillic-preview" aria-hidden="true">
+                <span class="preview-kicker">YOUR NEXT CHAPTER</span>
+                <strong>Study abroad.<br /><span>Go further.</span></strong>
+                <div class="brillic-path"><i>01</i> Choose a destination <b>→</b></div>
+                <div class="brillic-path"><i>02</i> Plan your application <b>→</b></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="products">
+          <button class="project-head" aria-expanded="false">
+            <span class="p-name">Suneha Healthcare</span>
+            <span class="p-summary">Ayurvedic storefront with customer sign-in, checkout and admin tools.</span>
+            <span class="p-type">Ayurvedic e-commerce</span>
+            <span class="p-plus" aria-hidden="true"></span>
+          </button>
+          <div class="project-body">
+            <div class="project-inner">
+              <div>
+                <p>An online store for Ayurvedic products in the style of Patanjali, with a storefront for customers and an admin panel for the team.</p>
+                <ul class="feat">
+                  <li>Product catalogue, cart and checkout</li>
+                  <li>Email OTP and Google sign-in</li>
+                  <li>Admin panel for products, orders and users</li>
+                  <li>Custom design system across the whole UI</li>
+                </ul>
+                <div class="chips"><span>Next.js</span><span>NestJS</span><span>Prisma</span><span>Google OAuth</span></div>
+              </div>
+              <div class="mock" aria-hidden="true">
+                <div class="tiles">
+                  <div class="tile"><span></span>Ashwagandha</div>
+                  <div class="tile"><span></span>Triphala</div>
+                  <div class="tile"><span></span>Chyawanprash</div>
+                </div>
+                <div class="mock-btn">Add to cart</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="products">
+          <button class="project-head" aria-expanded="false">
+            <span class="p-name">CRM and Team Management</span>
+            <span class="p-summary">A shared workspace for sales pipelines, projects and people operations.</span>
+            <span class="p-type">Internal business app</span>
+            <span class="p-plus" aria-hidden="true"></span>
+          </button>
+          <div class="project-body">
+            <div class="project-inner">
+              <div>
+                <p>A CRM and HR web app that keeps leads, projects and people in one place for a growing team.</p>
+                <ul class="feat">
+                  <li>Leads and projects pipeline</li>
+                  <li>Employees, roles, leaves and calendar</li>
+                  <li>Announcements and a live dashboard</li>
+                </ul>
+                <div class="chips"><span>Next.js</span><span>NestJS</span><span>REST API</span></div>
+              </div>
+              <div class="mock" aria-hidden="true">
+                <div class="kanban">
+                  <div class="kcol"><b>New</b><i class="kcard"></i><i class="kcard hot"></i></div>
+                  <div class="kcol"><b>Talking</b><i class="kcard"></i></div>
+                  <div class="kcol"><b>Won</b><i class="kcard win"></i><i class="kcard win"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="products">
+          <button class="project-head" aria-expanded="false">
+            <span class="p-name">Drag-and-drop Form Builder</span>
+            <span class="p-summary">Create, arrange and publish custom forms with a visual editor.</span>
+            <span class="p-type">SaaS tool</span>
+            <span class="p-plus" aria-hidden="true"></span>
+          </button>
+          <div class="project-body">
+            <div class="project-inner">
+              <div>
+                <p>A form builder where users drag fields onto a canvas, reorder them and publish forms.</p>
+                <ul class="feat">
+                  <li>Field palette with sortable canvas</li>
+                  <li>Saved forms and submissions</li>
+                </ul>
+                <div class="chips"><span>Next.js</span><span>dnd-kit</span><span>Express</span><span>Prisma</span></div>
+              </div>
+              <div class="mock" aria-hidden="true">
+                <div class="field">Full name</div>
+                <div class="field">Email address</div>
+                <div class="field">Message</div>
+                <div class="mock-btn">Publish form</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" id="automation-project" data-category="automation">
+          <button class="project-head" aria-expanded="false">
+            <span class="p-name">AI Automation Workflows</span>
+            <span class="p-summary">Turn Instagram enquiries into qualified leads and WhatsApp follow-ups.</span>
+            <span class="p-type">n8n · Make · Zapier</span>
+            <span class="p-plus" aria-hidden="true"></span>
+          </button>
+          <div class="project-body">
+            <div class="project-inner">
+              <div>
+                <p>Custom workflows that move a lead from social enquiry to a timely, organized response—without repetitive manual steps.</p>
+                <ul class="feat">
+                  <li>Capture Instagram enquiries and route new leads into a CRM or Google Sheet</li>
+                  <li>Send WhatsApp replies, notify a team member and schedule follow-ups</li>
+                  <li>Add AI steps to classify intent, summarize messages or draft responses</li>
+                  <li>Connect services using n8n, Make, Zapier, APIs and webhooks</li>
+                </ul>
+                <div class="chips"><span>Instagram</span><span>WhatsApp</span><span>n8n</span><span>Make</span><span>Zapier</span><span>APIs &amp; webhooks</span></div>
+              </div>
+              <div class="mock" aria-hidden="true">
+                <div class="flow-preview-label">INSTAGRAM → WHATSAPP LEAD FLOW</div>
+                <div class="miniflow">
+                  <span class="mini-node">Instagram DM</span><span class="arrow">→</span>
+                  <span class="mini-node ai">AI qualify</span><span class="arrow">→</span>
+                  <span class="mini-node">CRM</span>
+                </div>
+                <div class="miniflow">
+                  <span class="mini-node">New lead</span><span class="arrow">→</span>
+                  <span class="mini-node">WhatsApp reply</span><span class="arrow">→</span>
+                  <span class="mini-node">Follow-up</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section experience" id="experience">
+      <div class="section-head">
+        <h2>A path built by shipping.</h2>
+        <p>Four steps from my first internship to building products across SaaS, apps and automation.</p>
+      </div>
+      <div class="experience-grid">
+        <article class="experience-item">
+          <span class="experience-step" aria-hidden="true">01</span>
+          <div class="experience-date"><time datetime="2024-07">JUL 2024 — DEC 2024</time></div>
+          <div class="experience-role">
+            <h3>Intern <span>· Ansh Infotech</span></h3>
+            <p>Completed an internship at Ansh Infotech.</p>
+          </div>
+          <span class="experience-tag">Internship</span>
+        </article>
+        <article class="experience-item">
+          <span class="experience-step" aria-hidden="true">02</span>
+          <div class="experience-date"><time datetime="2025-02">FEB 2025 — NOV 2025</time></div>
+          <div class="experience-role">
+            <h3>Software Developer <span>· VR Automation</span></h3>
+            <p>Learned and built AI automation workflows with n8n, Make and Zapier.</p>
+          </div>
+          <span class="experience-tag">AI · Automation</span>
+        </article>
+        <article class="experience-item">
+          <span class="experience-step" aria-hidden="true">03</span>
+          <div class="experience-date"><time datetime="2026-01">JAN 2026 — JUL 2026</time></div>
+          <div class="experience-role">
+            <h3>Full-stack Web &amp; App Developer <span>· Flymedia Technology</span></h3>
+            <p>Built web and mobile products end to end, including WorkOnTap, a home-services marketplace available on web and Google Play.</p>
+          </div>
+          <span class="experience-tag">Web · Android</span>
+        </article>
+        <article class="experience-item experience-item-current">
+          <span class="experience-step" aria-hidden="true">04</span>
+          <div class="experience-date">
+            <span class="experience-current">CURRENT ROLE</span>
+            <time datetime="2026-07">JUL 2026 — PRESENT</time>
+          </div>
+          <div class="experience-role">
+            <h3>Software Engineer <span>· Zioza Technology</span></h3>
+            <p>Building Zioza Connect, a multi-tenant CRM and marketing platform with NestJS. Working on leads, segments, tags and role-based access.</p>
+          </div>
+          <span class="experience-tag">SaaS · NestJS</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="section section-tint" id="stack">
+      <div class="section-head">
+        <h2>Web, apps &amp; automation</h2>
+        <p>From the first screen to the last follow-up, I build products and connect the workflows behind them.</p>
+      </div>
+      <div class="stack-grid">
+        <div class="stack-col">
+          <h3>01 / Web development</h3>
+          <p>Responsive websites, SaaS dashboards and e-commerce experiences with polished, practical interfaces.</p>
+          <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GSAP</span><span>React</span><span>Next.js</span><span>Tailwind</span></div>
+        </div>
+        <div class="stack-col">
+          <h3>02 / Apps &amp; backend</h3>
+          <p>App experiences backed by secure APIs, user accounts, roles, data and multi-tenant product logic.</p>
+          <div class="chips"><span>Android apps</span><span>Node.js</span><span>NestJS</span><span>Express</span><span>REST APIs</span><span>Prisma</span><span>PostgreSQL</span><span>JWT</span><span>OAuth</span><span>RBAC</span></div>
+        </div>
+        <div class="stack-col">
+          <h3 id="automation">03 / AI &amp; automation</h3>
+          <p>Instagram enquiries into organized leads; AI-assisted WhatsApp replies, team handoff and timely follow-ups.</p>
+          <div class="chips"><span>n8n</span><span>Make</span><span>Zapier</span><span>AI workflows</span><span>Instagram</span><span>WhatsApp</span><span>Webhooks</span></div>
+        </div>
+        <div class="stack-col">
+          <h3>04 / Payments &amp; APIs</h3>
+          <p>Payment integrations and API connections that help digital products work smoothly from checkout to backend.</p>
+          <div class="chips"><span>Stripe</span><span>Stripe Connect</span><span>Razorpay</span><span>REST APIs</span><span>JWT</span><span>OAuth</span><span>PostgreSQL</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="about-big">
+        <span class="count" data-to="2.5">0</span><span class="count-unit">years</span>
+        <p>building full-stack web and app products</p>
+      </div>
+      <div class="about-copy">
+        <h2>Hi, I'm Imran.</h2>
+        <p>I'm a full-stack developer with 2.5 years of experience building multi-tenant SaaS, web and mobile apps, e-commerce platforms and AI-powered automation workflows.</p>
+        <p>My work spans NestJS backends, payments and pixel-accurate Next.js frontends. I enjoy taking a product from the first interface through the APIs and workflows that make it useful.</p>
+        <p><strong class="education-label">EDUCATION</strong><br />BCA, completed 2025<br />Swami Vivekananda Group of Institutes</p>
+        <div class="tags">
+          <span>Multi-tenant architecture</span>
+          <span>Auth and RBAC</span>
+          <span>Pixel-accurate UI</span>
+          <span>Automation first</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <h2>Have a product to build?</h2>
+      <p>I'm open to full-time roles, freelance projects and long-term collaborations.</p>
+      <div class="contact-actions">
+        <a class="btn btn-primary btn-lg" href="mailto:imrancodingschool@gmail.com" id="emailLink">imrancodingschool@gmail.com</a>
+        <a class="btn btn-ghost btn-lg" href="tel:6209410566">6209410566</a>
+        <button class="btn btn-ghost btn-lg" type="button" id="copyEmail">Copy email</button>
+      </div>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/imran-aly-6128012a7/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Imran</span>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Email copied</div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
