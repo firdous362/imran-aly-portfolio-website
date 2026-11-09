@@ -21,29 +21,6 @@ if (cursor && window.innerWidth > 600 && window.matchMedia("(hover: hover) and (
   document.documentElement.addEventListener("pointerleave", () => cursor.classList.remove("visible"));
 }
 
-/* ---------- Experience card pointer effects ---------- */
-if (!reduced && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
-  document.querySelectorAll(".experience-item").forEach((card) => {
-    card.addEventListener("pointermove", (event) => {
-      const bounds = card.getBoundingClientRect();
-      const x = (event.clientX - bounds.left) / bounds.width;
-      const y = (event.clientY - bounds.top) / bounds.height;
-
-      card.style.setProperty("--pointer-x", `${x * 100}%`);
-      card.style.setProperty("--pointer-y", `${y * 100}%`);
-      card.style.setProperty("--tilt-x", `${(x - 0.5) * 4}deg`);
-      card.style.setProperty("--tilt-y", `${(0.5 - y) * 4}deg`);
-    }, { passive: true });
-
-    card.addEventListener("pointerleave", () => {
-      card.style.removeProperty("--pointer-x");
-      card.style.removeProperty("--pointer-y");
-      card.style.removeProperty("--tilt-x");
-      card.style.removeProperty("--tilt-y");
-    });
-  });
-}
-
 /* ---------- Nav background on scroll ---------- */
 const nav = document.getElementById("nav");
 const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 20);
@@ -67,16 +44,24 @@ const copyBtn = document.getElementById("copyEmail");
 const toast = document.getElementById("toast");
 copyBtn.addEventListener("click", async () => {
   const email = document.getElementById("emailLink").textContent.trim();
+  let copied = false;
   try {
     await navigator.clipboard.writeText(email);
-  } catch (e) {
+    copied = true;
+  } catch {
     const t = document.createElement("textarea");
     t.value = email;
     document.body.appendChild(t);
     t.select();
-    document.execCommand("copy");
-    t.remove();
+    try {
+      copied = document.execCommand("copy");
+    } catch {
+      copied = false;
+    } finally {
+      t.remove();
+    }
   }
+  toast.textContent = copied ? "Email copied" : "Couldn't copy email — select it above";
   gsap.killTweensOf(toast);
   gsap.timeline()
     .to(toast, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" })
@@ -279,14 +264,18 @@ projectFilters.forEach((button) => {
       gsap.set(body, { height: 0 });
       project.classList.remove("open");
       head.setAttribute("aria-expanded", "false");
+      body.inert = true;
       project.hidden = !matches;
     });
   });
 });
 
-projects.forEach((p) => {
+projects.forEach((p, index) => {
   const head = p.querySelector(".project-head");
   const body = p.querySelector(".project-body");
+  body.id = `project-details-${index + 1}`;
+  body.inert = true;
+  head.setAttribute("aria-controls", body.id);
 
   head.addEventListener("click", () => {
     const opening = !p.classList.contains("open");
@@ -298,6 +287,7 @@ projects.forEach((p) => {
     if (opening) {
       p.classList.add("open");
       head.setAttribute("aria-expanded", "true");
+      body.inert = false;
       gsap.to(body, { height: "auto", duration: reduced ? 0 : 0.5, ease: "power3.out" });
       gsap.fromTo(
         body.querySelectorAll(".feat li, .chips span"),
@@ -313,7 +303,9 @@ projects.forEach((p) => {
 function closeProject(p) {
   p.classList.remove("open");
   p.querySelector(".project-head").setAttribute("aria-expanded", "false");
-  gsap.to(p.querySelector(".project-body"), { height: 0, duration: reduced ? 0 : 0.4, ease: "power3.inOut" });
+  const body = p.querySelector(".project-body");
+  body.inert = true;
+  gsap.to(body, { height: 0, duration: reduced ? 0 : 0.4, ease: "power3.inOut" });
 }
 
 /* ---------- Count-up for experience ---------- */
@@ -351,15 +343,32 @@ if (!reduced) {
   };
 
   reveal(".service-card", ".services-grid", 0.1);
-  gsap.from(".experience-item", {
+  const journeyProgress = { value: 0 };
+  const updateJourneyProgress = () => {
+    const vertical = window.matchMedia("(max-width: 1000px)").matches;
+    gsap.set(".experience-rail-progress", {
+      scaleX: vertical ? 1 : journeyProgress.value,
+      scaleY: vertical ? journeyProgress.value : 1,
+    });
+  };
+
+  window.addEventListener("resize", updateJourneyProgress, { passive: true });
+  gsap.to(journeyProgress, {
+    value: 1,
+    duration: 1.5,
+    ease: "power2.out",
+    onUpdate: updateJourneyProgress,
+    scrollTrigger: { trigger: ".experience-journey", start: "top 78%", once: true },
+  });
+
+  gsap.from(".experience-stop", {
     opacity: 0,
-    y: 34,
-    scale: 0.96,
-    duration: 0.8,
-    stagger: 0.14,
+    y: 22,
+    duration: 0.7,
+    stagger: 0.12,
     ease: "power3.out",
     clearProps: "transform,opacity",
-    scrollTrigger: { trigger: ".experience-grid", start: "top 82%", once: true },
+    scrollTrigger: { trigger: ".experience-journey", start: "top 78%", once: true },
   });
   reveal(".about-big, .about-copy", "#about", 0.12);
   reveal(".contact h2, .contact .contact-actions, .contact .links", "#contact", 0.1);
